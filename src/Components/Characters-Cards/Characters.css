@@ -1,3 +1,5 @@
+/* //Use flex wrap para que a medida que se achica la pantalla los elementos se reorganicen */
+/* //Los ajuste con flex dentro del contendor, los centre al centro y le pus espaciado con gap */
 .Cards{
   display: flex;    
   flex-wrap: wrap;
