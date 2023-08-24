@@ -1,8 +1,9 @@
 import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
+import { Link } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import "./Characters.css"
+import CharacterDetails from './Details';
 
 function Characters() {
   const [data, setData] = useState([]);
@@ -18,31 +19,24 @@ function Characters() {
   }, []);
 
   return (
-    <div className='Cards'>
+    <div className='Cards' >
       {data.map((character, index) => {
         return (
-          <Card
-            key={index}
-            style={{
-              width: "250px",
-              
-              backgroundColor: "green",
-              
-            }}
-          >
-            <Card.Img variant='top' src={character.image} alt={character.name} />
-            <Card.Body>
-              <h3>{character.name}</h3>
-              <ListGroup variant='flush'>
-                <ListGroup.Item>Status: {character.status}</ListGroup.Item>
-                <ListGroup.Item>Species: {character.species}</ListGroup.Item>
-                <ListGroup.Item>Gender: {character.gender}</ListGroup.Item>
-                <ListGroup.Item>Origin: {character.origin.name}</ListGroup.Item>
-                <ListGroup.Item>Location: {character.location.name}</ListGroup.Item>
-                <ListGroup.Item>Episodes: {character.episode.length}</ListGroup.Item>
-              </ListGroup>
-            </Card.Body>
-          </Card>
+          <Link to={`/CharacterDetails/${character.id}`} key={index} className='CardLink'>
+            <Card
+              style={{
+                width: '250px',
+                backgroundColor: 'green',
+
+            
+              }}
+            >
+              <Card.Img variant='top' src={character.image} alt={character.name} />
+              <Card.Body  >
+                <h3>{character.name}</h3>
+              </Card.Body>
+            </Card>
+          </Link>
         );
       })}
     </div>

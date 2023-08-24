@@ -1,4 +1,18 @@
 .headerImg{
   
   text-align: center;
+  
+ 
 }
+
+.headerImg img{
+  width: 70%;
+}
+
+
+.Home{
+  background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top;
+    z-index: -2;
+}
+
+
