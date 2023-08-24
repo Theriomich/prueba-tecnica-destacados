@@ -1,12 +1,12 @@
-# Getting Started with Create React App
+# Rick and Morty
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pagina web que muestra los personajes de Rick And Morty consumidos de una API y muestra sus caracteristicas
 
-## Available Scripts
+## Instalación
 
-In the project directory, you can run:
+Para correrlo puedes hacerlo con npm install y luego npm start
 
-### `npm start`
+### Página web
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
